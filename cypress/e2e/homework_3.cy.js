@@ -68,7 +68,7 @@ describe('Drag and Drop circles', () => {
       }
    });
 });
-describe.only('Form Validation page for Automation Testing Practice', () => {
+describe('Form Validation page for Automation Testing Practice', () => {
    beforeEach(() => {
       cy.visit('https://practice.expandtesting.com/form-validation');
    });
@@ -121,7 +121,17 @@ describe.only('Form Validation page for Automation Testing Practice', () => {
       cy.get('input[name="pickupdate"]').type('2025-11-30');
       cy.get('#validationCustom04').select('card');
       cy.get('button[type="submit"]').click();
-      cy.url().should('include','/form-confirmation');
+      cy.url().should('include', '/form-confirmation');
       cy.contains('Thank you for validating your ticket').should('be.visible');
+   });
+});
+describe('practice expandtesting', () => {
+   it('waiting time', () => {
+      cy.visit('https://practice.expandtesting.com/slow');
+      cy.contains('The slow task has finished. Thanks for waiting!', { timeout: 10000 }).should('be.visible');
+   });
+   it('Find element', () => {
+      cy.visit('https://practice.expandtesting.com/large');
+      cy.get('#large-table').contains('td', '48.48').scrollIntoView().should('be.visible');
    });
 });
