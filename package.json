@@ -1,0 +1,21 @@
+{
+  "name": "cypresstraining",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.1",
+    "@testing-library/cypress": "^10.1.0",
+    "cypress": "^15.7.1",
+    "cypress-drag-drop": "^1.1.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.1"
+  }
+}
